@@ -1,0 +1,36 @@
+// Sample data array
+const data = [
+    { name: "John", age: 30, city: "New York" },
+    { name: "Jane", age: 25, city: "Los Angeles" },
+    { name: "Mike", age: 35, city: "Chicago" },
+    { name: "Emily", age: 22, city: "San Francisco" },
+];
+
+// Get the table body element
+const tableBody = document.querySelector('#data-table tbody');
+
+// Function to render table rows dynamically
+function renderTable(data) {
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        
+        // Create table cells for each item
+        const nameCell = document.createElement('td');
+        nameCell.textContent = item.name;
+        row.appendChild(nameCell);
+        
+        const ageCell = document.createElement('td');
+        ageCell.textContent = item.age;
+        row.appendChild(ageCell);
+        
+        const cityCell = document.createElement('td');
+        cityCell.textContent = item.city;
+        row.appendChild(cityCell);
+        
+        // Append the row to the table body
+        tableBody.appendChild(row);
+    });
+}
+
+// Call the function to render the table
+renderTable(data);
