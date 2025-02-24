@@ -34,3 +34,4 @@ function renderTable(data) {
 
 // Call the function to render the table
 renderTable(data);
+}
